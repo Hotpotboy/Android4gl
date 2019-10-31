@@ -1,0 +1,12 @@
+attribute vec3 aPosition;
+
+attribute vec4 aColor;
+
+uniform mat4 u_mvpMatrix;
+
+varying vec4 color;
+
+void main(){
+ gl_Position = u_mvpMatrix * vec4(aPosition, 1.0f);
+ color = aColor;
+}
